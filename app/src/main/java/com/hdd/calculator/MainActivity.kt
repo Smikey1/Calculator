@@ -1,6 +1,5 @@
 package com.hdd.calculator
 
-import android.database.DatabaseUtils
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -8,7 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 
 class MainActivity : AppCompatActivity() {
-   private var isNewOperator=true
+   private var isNewOperator = true
   private  var oldNumber=""
    private var operator = "+"
     // Initialize
@@ -35,7 +34,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
        setContentView(R.layout.activity_main)
-
 
         //Binding
         etResult = findViewById(R.id.etResult)
@@ -78,6 +76,10 @@ class MainActivity : AppCompatActivity() {
         }
         etResult.setText(btnClick)
     }
+    fun resetEvent(view: View) {
+        etResult.setText("0")
+        isNewOperator=true
+    }
     fun operatorEvent(view: View) {
         isNewOperator = true
         oldNumber=etResult.text.toString()
@@ -106,8 +108,4 @@ class MainActivity : AppCompatActivity() {
         isNewOperator=true
     }
 
-    fun resetEvent(view: View) {
-        etResult.setText("0")
-        isNewOperator=true
-    }
 }

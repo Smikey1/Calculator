@@ -28,20 +28,20 @@
         android:layout_height="wrap_content"
         android:text="Reset"
         android:onClick="resetEvent"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginRight="30dp"
         android:textAllCaps="false"
         android:textSize="30sp" />
-
     <Button
         android:id="@+id/btnCalculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="Calculate"
-        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:onClick="calculateEvent"
         android:textSize="30sp" />
+
     </GridLayout>
 
     <GridLayout
@@ -269,7 +269,6 @@
             android:textSize="25sp"
             app:backgroundTint="#D1D2C9"
             />
-
     </GridLayout>
 </LinearLayout>
 
